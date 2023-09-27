@@ -8,6 +8,7 @@ use Filament\Tables;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
+use FilamentTiptapEditor\TiptapEditor;
 use Filament\Forms\Components\Textarea;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
@@ -28,7 +29,7 @@ class PostResource extends Resource
             ->columns(1)
             ->schema([
                 TextInput::make('title'),
-                Textarea::make('content'),
+                TiptapEditor::make('content'),
             ]);
     }
 
